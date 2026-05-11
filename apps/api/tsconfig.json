@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    
+    "module": "nodenext",
+    "resolvePackageJsonExports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ES2022",
+    "sourceMap": true,
+    "rootDir": "../../", // <--- ГОВОРИМ: Корень там, где папки apps и libs
+    "outDir": "./dist",
+    "paths": {
+      "src/*": ["./src/*"],
+      "@libs/db": ["../../libs/db/db.module.ts"],
+      "@libs/db/*": ["../../libs/db/*"]
+    },
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "noFallthroughCasesInSwitch": false
+    
+  },
+  "include": [
+    "src/**/*",
+    "../../libs/db/**/*" // <--- ГОВОРИМ: Включай файлы базы в проверку
+  ]
+}
