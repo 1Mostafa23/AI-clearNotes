@@ -7,7 +7,7 @@ import { UsersService } from 'src/services/user.service';
 @Controller('user')
 export class UserController {
   constructor(private readonly userservice: UsersService) {}
-  @Patch('change-password')
+  @Patch('change-password/:id')
   @UsePipes(new ZodValidationPipe(ChangePasswordSchema))
   async ChangePassword(@Param('id') userID: string, @Body() data : ChangePasswordDTO) {
     return await this.userservice.changePassword(userID, data)

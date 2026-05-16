@@ -7,6 +7,8 @@
     "libs/*"
   ],
   "dependencies": {
+    "@nestjs/config": "^4.0.4",
+    "@nestjs/jwt": "^11.0.2",
     "bcrypt": "^6.0.0",
     "drizzle-orm": "^0.45.2",
     "pg": "^8.20.0",
